@@ -22,11 +22,11 @@ namespace KeyboardTester
             keyControl.ViewModel.Pressed = true;
             keyControl.ViewModel.PreviouslyPressed = true;
 
-            if (keyControl == Return)
-            {
-                ReturnLower.ViewModel.Pressed = true;
-                ReturnLower.ViewModel.PreviouslyPressed = true;
-            }
+            //if (keyControl == Return)
+            //{
+            //    ReturnLower.ViewModel.Pressed = true;
+            //    ReturnLower.ViewModel.PreviouslyPressed = true;
+            //}
 
             e.Handled = true;
         }
@@ -39,8 +39,8 @@ namespace KeyboardTester
 
             keyControl.ViewModel.Pressed = false;
 
-            if (keyControl == Return)
-                ReturnLower.ViewModel.Pressed = false;
+            //if (keyControl == Return)
+            //    ReturnLower.ViewModel.Pressed = false;
 
             if (keyControl == Snapshot)
                 Snapshot.ViewModel.PreviouslyPressed = true;
@@ -66,8 +66,9 @@ namespace KeyboardTester
             
             if (keyEvent.Key == Key.System)
             {
-                if (IsModifier(ModifierKeys.Alt))
-                    return LeftAlt;
+                //if (IsModifier(ModifierKeys.Alt))
+                //    return LeftAlt;
+
                 if (keyEvent.SystemKey == Key.F10)
                     return F10;
                 if (keyEvent.SystemKey == Key.F11)
